@@ -1,0 +1,32 @@
+{
+  "name": "cross-project-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --runInBand"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parse": "^0.1.0",
+    "chai": "^4.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "express": "^4.17.1",
+    "frisby": "^2.1.3",
+    "jest": "^27.4.5",
+    "mocha": "^9.1.3",
+    "node-fetch": "^3.1.0",
+    "sinon": "^12.0.1",
+    "sinon-chai": "^3.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
