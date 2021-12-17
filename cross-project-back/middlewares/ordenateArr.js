@@ -1,18 +1,18 @@
-const gettingSort = (array) => {
+const gettingSort = (e) => {
   let done = false;
   while (!done) {
     done = true;
-    for (let i = 1; i < array.length; i += 1) {
-      if (array[i - 1] > array[i]) {
+    for (let i = 1; i < e.length; i += 1) {
+      if (e[i - 1] > e[i]) {
         done = false;
-        let tmp = array[i - 1];
-        array[i - 1] = array[i];
-        array[i] = tmp;
+        let tmp = e[i - 1];
+        e[i - 1] = e[i];
+        e[i] = tmp;
       }
     }
   }
 
-  return array;
+  return e;
 };
 
 module.exports = { gettingSort };

@@ -28,7 +28,7 @@ describe('Controller tests', () => {
     });
     it('Params is valid', async () => {
       const stub = sinon.stub(mdw, 'getApi').resolves(pages[1]);
-      await ctrl.newSelected(req, res);
+      await ctrl.newRandom(req, res);
       expect(res.status).to.have.been.calledWith(200);
       stub.restore();
     });
@@ -37,7 +37,7 @@ describe('Controller tests', () => {
     });
     it('"id" is not null', async () => {
       const stub = sinon.stub(mdw, 'getApi').resolves(pages[1]);
-      await ctrl.newSelected(req, res);
+      await ctrl.newRandom(req, res);
       expect(req.params.id).to.be.equal(pages[1]);
       stub.restore();
     });
@@ -48,7 +48,7 @@ describe('Controller tests', () => {
     });
     it('Params is Empty', async () => {
       const stub = sinon.stub(mdw, 'getApi').resolves();
-      await ctrl.newSelected(req, res);
+      await ctrl.newRandom(req, res);
       expect(res.status).to.have.been.calledWith(500);
       stub.restore();
       // é necessário criar um validation para parmas sem valor ou vazio
@@ -58,7 +58,7 @@ describe('Controller tests', () => {
     });
     it('"id" is invalid', async () => {
       const stub = sinon.stub(mdw, 'getApi').resolves();
-      await ctrl.newSelected(req, res);
+      await ctrl.newRandom(req, res);
       expect(req.params.id).to.be.equal(pages[0]);
       stub.restore();
       // é necessário criar validation para id invalido
@@ -70,7 +70,7 @@ describe('Controller tests', () => {
     });
     it('An array empty is sent', async () => {
       const stub = sinon.stub(mdw, 'getApi').resolves();
-      await ctrl.newSelected(req, res);
+      await ctrl.newRandom(req, res);
       expect(res.status).to.have.been.calledWith(200);
       stub.restore();
     });
@@ -79,7 +79,7 @@ describe('Controller tests', () => {
     });
     it('An array empty is sent', async () => {
       const stub = sinon.stub(mdw, 'getApi').resolves();
-      await ctrl.newSelected(req, res);
+      await ctrl.newRandom(req, res);
       expect(res.json).to.have.been.calledWith([]);
       stub.restore();
     });
