@@ -1,0 +1,8 @@
+.header-table {
+  background: linear-gradient(to right,#13fc00,#13fcff);
+  border-radius: 30px;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 12px 67px;
+  width: 500px;
+}

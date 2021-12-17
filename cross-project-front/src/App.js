@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Numbers from './pages/Random';
 import SelectedNum from './pages/Selected';
 // import { getData } from './services/api';
+import './App.css';
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getData } from '../services/api';
-// import { Container } from './styles';
+import './Numbers.css';
 
 function Numbers() {
   const [data, setData] = useState([]);

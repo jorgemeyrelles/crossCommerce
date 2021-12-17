@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-// import { Container } from './styles';
+import './Principal.css';
 
 function Principal() {
   const [login, setLogin] = useState(['random', 0]);
@@ -29,13 +28,17 @@ function Principal() {
   return (
     <main style={ { position: 'fixed', height: '100%', width: '100%', textAlign: '-webkit-center', zIndex: '99' } }>
       <form style={ { position: 'relative', top: '30%' } }>
-        <h3>Choose a Specific Code Page</h3>
-        <div>
-          <input type="number" placeholder="Write a number" name="select" onChange={ handleChange } />
-          <button type="submit" onClick={ () => submitBtn() }>Go</button>
+        <div className='header-table'>
+          <h3>Choose a Specific Code Page</h3>          
+          <div>
+            <input type="number" placeholder="Write a number" name="select" onChange={ handleChange } />
+            <button type="submit" onClick={ () => submitBtn() }>Go</button>
+          </div>
         </div>
-        <h3>Receive a code randomly</h3>
-        <button type="button" onClick={ () => submitBtn() }>Random Code Page</button>
+        <div className='header-table'>
+          <h3>Receive a code randomly</h3> 
+          <button type="button" onClick={ () => submitBtn() }>Random Code Page</button>
+        </div>
       </form>
     </main>
   );
