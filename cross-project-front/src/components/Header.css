@@ -1,5 +1,5 @@
 nav {
-  background: linear-gradient(to right, #c1c1c1, #fff);
+  background: linear-gradient(to right, #c1c1c1 70%, #fff);
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,4 +19,23 @@ nav {
   font-size: 30px;
   font-weight: 800;
   font-style: italic;
+}
+
+@media screen and (max-width: 910px) {
+  .lateral-text {
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .lateral-text {
+    font-size: 20px;
+    font-weight: 800;
+    font-style: italic;
+    width: 150px;
+    word-wrap: break-word;
+    text-align: right;
+  }
 }
