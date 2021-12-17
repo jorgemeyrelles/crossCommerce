@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { gettingSort } = require('./ordenateArr');
+const { gettingSort } = require('../middlewares/ordenateArr');
 require('dotenv').config();
 
 const URL = process.env.URL;
