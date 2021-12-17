@@ -8,7 +8,7 @@ const emptyId = (req, res, next) => {
 
 const invalidId = (req, res, next) => {
   const { id } = req.params;
-  const regex = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+  const regex = /^[a-zA-Z!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
   if (parseInt(id) === 0 || regex.test(id)) {
     return res.status(500).json({ message: 'Invalid "id"' })
   };
