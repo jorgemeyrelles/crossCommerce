@@ -25,7 +25,6 @@ function Numbers() {
           <th>Code number</th>
         </tr>
         { data.map((e, i) => {
-          console.log(i, e);
           return (
             <tr>
               <td>{i + 1}</td>
