@@ -10,7 +10,9 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <Routes>
-      <Route exact path="/" element= { <Home /> } />
+      <Route exact path="/" element={ <Home /> } />
+      <Route exact path="/random" element={ <NotFound /> } />
+      <Route exact path="/selected" element={ <NotFound /> } />
       <Route exact path="/random/:id" element={ <Numbers /> } />
       <Route exact path="/selected/:id" element={ <SelectedNum /> } />
       <Route path="*" element={ <NotFound /> } />
